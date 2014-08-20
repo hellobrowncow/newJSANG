@@ -1,0 +1,41 @@
+<html data-ng-app="newApp">
+   <head>
+    <title>Movies</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="app.js"></script>
+    <!-- <link rel="stylesheet" href="stylesheet.css" media="all"> -->
+  </head>
+
+  <body data-ng-controller="MoviePanel">
+    <main class="container">
+      <div class="row">
+  <div class="col-md-5"> 
+
+        <form class="search-form" data-ng-submit="search(searchInput)">
+          <input type = "input" name="search-field" class="search-field" data-ng-model="searchInput">
+          <input type="submit" data-ng-submit="searchInput" value="Save and Output to Console">
+        </form>
+        <ul class="movie-list" id="search-drop-down">
+          <li class="movie-in-list" data-ng-repeat="amovie in movieList">
+            <div data-ng-click="showDetails(amovie)">{{amovie.Title}}</div> 
+          </li>
+        </ul> 
+      </div>
+
+        <div class="col-md-7 float=right">
+        <div><p>You searched for: <em>"{{searchInput}}"</em></p></div>
+        <div><p>You are looking at: "<strong><u>{{movieTitle}}</u></strong>"</p></div>
+        <p>{{moviePlot}}</p>
+        <img ng-src="{{moviePoster}}">
+        </div> 
+
+
+      </div>
+    </main>
+  </body>
+
+
+</html>
+
