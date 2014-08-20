@@ -18,18 +18,18 @@
         </form>
         <ul class="movie-list" id="search-drop-down">
           <li class="movie-in-list" data-ng-repeat="amovie in movieList">
-            <div data-ng-click="showDetails(amovie)">{{amovie.Title}}</div> 
+            <div data-ng-click="showDetails(amovie)"><span class="glyphicon glyphicon-hand-right"> {{amovie.Title}}</span></div> 
           </li>
         </ul> 
       </div>
 
         <div class="col-md-7 float=right">
           <div ng-show="searchInput">
-        <div><p>You searched for: <em>"{{searchInput}}"</em></p></div>
-        <div><p>You are looking at: "<strong><u>{{movieTitle}}</u></strong>"</p></div>
-        </div>
-        <p>{{moviePlot}}</p>
-        <img ng-src="{{moviePoster}}">
+            <div><p>You searched for: <em>"{{searchInput}}"</em></p></div>
+            <div><p>You are looking at: "<strong><u>{{movieTitle}}</u></strong>"</p></div>
+          </div>
+          <p>{{moviePlot}}</p>
+          <img ng-src="{{moviePoster}}">
         </div> 
 
 
