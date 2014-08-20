@@ -9,7 +9,6 @@
       this.$scope = $scope;
       this.$http = $http;
       $scope.search = function(amovie) {
-        console.log(amovie);
         return $http({
           method: 'GET',
           url: 'http://www.omdbapi.com/',
@@ -17,12 +16,8 @@
             s: amovie
           }
         }).success(function(data, status, headers, config) {
-          $scope.movieList = data.Search;
-          console.log(data.Search);
-          return console.log($scope.movieList[1].Year);
-        }).error(function(data, status, headers, config) {
-          return console.log("failure :(");
-        });
+          return $scope.movieList = data.Search;
+        }).error(function(data, status, headers, config) {});
       };
       $scope.showDetails = function(movie) {
         return $http({
@@ -32,18 +27,10 @@
             i: movie.imdbID
           }
         }).success(function(data, status, headers, config) {
-          var moviePlot;
           $scope.moviePlot = data.Plot;
-          moviePlot = "This is a fake movie plot";
           $scope.moviePoster = data.Poster;
-          $scope.movieTitle = data.Title;
-          console.log("scope movie plot: ", $scope.moviePlot);
-          console.log("movie plot: ", moviePlot);
-          console.log("scope movie Poster: ", $scope.moviePoster);
-          return console.log("scope movie title: ", $scope.movieTitle);
-        }).error(function(data, status, headers, config) {
-          return console.log("failure :( Part II");
-        });
+          return $scope.movieTitle = data.Title;
+        }).error(function(data, status, headers, config) {});
       };
     }
 
