@@ -3,3 +3,16 @@
 body {
   background:url("images/film-2048x1536.jpg");
 }
+
+.searchResult {
+  float: right;
+}
+
+.plotTitle {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.posterImage {
+  /*text-align: center;*/
+}
