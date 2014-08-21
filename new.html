@@ -16,9 +16,15 @@
           <input type = "input" name="search-field" class="search-field" data-ng-model="searchInput">
           <input type="submit" data-ng-submit="searchInput" value="Search the OMDb ! !">
         </form>
+            <input type = "checkbox" name="imagebox" ng-model="checkedHide">
+            <label for="imagebox">Hide Image?</label>
         <ul class="movie-list" id="search-drop-down">
           <li class="movie-in-list" data-ng-repeat="amovie in movieList">
-            <div data-ng-click="showDetails(amovie)"><span class="glyphicon glyphicon-hand-right"> {{amovie.Title}}</span></div> 
+            <div data-ng-click="showDetails(amovie)">
+              <a href="">  <!-- simulates hyperlink -->
+                <span class="glyphicon glyphicon-hand-right"> {{amovie.Title}}</span>
+              </a>
+            </div> 
           </li>
         </ul> 
       </div>
@@ -29,7 +35,9 @@
             <div><p>You are looking at: "<strong><u>{{movieTitle}}</u></strong>"</p></div>
           </div>
           <p>{{moviePlot}}</p>
+          <div ng-hide="checkedHide">
           <img ng-src="{{moviePoster}}">
+          </div>
         </div> 
 
 
