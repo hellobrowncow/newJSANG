@@ -10,48 +10,51 @@
   <body data-ng-controller="MoviePanel">
     <main class="container">
       <div class="row">
-  <div class="col-md-5"> 
+        <div class="col-md-5"> 
+          <div class="siteTitle">
+            <h1>The Movie Lookup (OMDb)</h1>
+            <div class="openingContent">
+              <p>This web application makes use of <a href="http://angularjs.org/">Angular JS</a> and the <a href="http://omdbapi.com">OMDb API</a> to quickly find movie information for you!!  <p>To start: just enter a search term below and then hit Enter.</p>  ENJOY!! </p>
+            </div>
+          </div>
+          <form class="search-form" data-ng-submit="search(searchInput)">
+            <input type = "input" name="search-field" class="search-field" data-ng-model="searchInput">
+            <input type="submit" data-ng-submit="searchInput" value="Search the OMDb ! !">
+          </form>
+          <input type = "checkbox" name="imagebox" ng-model="imageHide">
+          <label for="imagebox">Hide Image?</label>
+          <input type = "checkbox" name="plotbox" ng-model="plotHide">
+          <label for="imagebox">Hide Plot?</label>
+          <ul class="movie-list" id="search-drop-down">
+            <li class="movie-in-list" data-ng-repeat="amovie in movieList">
+              <div>
+                <a href="" data-ng-click="showDetails(amovie)">  <!-- simulates hyperlink -->
+                  <span class="glyphicon glyphicon-hand-right"> {{amovie.Title}} </span>
+                </a>
+              </div> 
+            </li>
+          </ul> 
+        </div>
 
-        <form class="search-form" data-ng-submit="search(searchInput)">
-          <input type = "input" name="search-field" class="search-field" data-ng-model="searchInput">
-          <input type="submit" data-ng-submit="searchInput" value="Search the OMDb ! !">
-        </form>
-            <input type = "checkbox" name="imagebox" ng-model="imageHide">
-            <label for="imagebox">Hide Image?</label>
-            <input type = "checkbox" name="plotbox" ng-model="plotHide">
-            <label for="imagebox">Hide Plot?</label>
-        <ul class="movie-list" id="search-drop-down">
-          <li class="movie-in-list" data-ng-repeat="amovie in movieList">
-            <div>
-              <a href="" data-ng-click="showDetails(amovie)">  <!-- simulates hyperlink -->
-                <span class="glyphicon glyphicon-hand-right"> {{amovie.Title}} </span>
-              </a>
-            </div> 
-          </li>
-        </ul> 
-      </div>
-
-      <div class="col-md-7 float=right">
-        <div class="searchTitle">
-        <h2>Search Results</h2>
-        </div>
-        <div ng-show="searchInput">
-          <div><p>You searched for: <em>"{{searchInput}}"</em></p></div>
-          <div><p>You are looking at: "<strong><u>{{movieTitle}}</u></strong>"</p></div>
-        </div>
-        <div ng-hide="plotHide">
-          <p class="plotTitle">The Plot: <p class="plotContent">{{moviePlot}}</p></p>
-        </div>
-        <div class="posterImage"ng-hide="imageHide">
-          <img ng-src="{{moviePoster}}">
-        </div>
-      </div> 
+        <div class="col-md-7 float=right">
+          <div ng-show="searchInput">
+            <div class="searchTitle">
+              <h2>Search Results: </h2>
+            </div>
+            <div><p>You searched for: <em>"{{searchInput}}"</em></p></div>
+            <div><p>You are looking at: "<strong><u>{{movieTitle}}</u></strong>"</p></div>
+            <div ng-hide="plotHide">
+              <p class="plotTitle">The Plot: <p class="plotContent">{{moviePlot}}</p></p>
+            </div>
+          </div>
+          <div class="posterImage"ng-hide="imageHide">
+            <img ng-src="{{moviePoster}}">
+          </div>
+        </div> 
 
 
       </div>
     </main>
   </body>
-
-
-</html>
+  </html>
 
