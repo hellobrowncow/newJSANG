@@ -18,27 +18,34 @@
         </form>
             <input type = "checkbox" name="imagebox" ng-model="imageHide">
             <label for="imagebox">Hide Image?</label>
+            <input type = "checkbox" name="plotbox" ng-model="plotHide">
+            <label for="imagebox">Hide Plot?</label>
         <ul class="movie-list" id="search-drop-down">
           <li class="movie-in-list" data-ng-repeat="amovie in movieList">
-            <div data-ng-click="showDetails(amovie)">
-              <a href="">  <!-- simulates hyperlink -->
-                <span class="glyphicon glyphicon-hand-right"> {{amovie.Title}}</span>
+            <div>
+              <a href="" data-ng-click="showDetails(amovie)">  <!-- simulates hyperlink -->
+                <span class="glyphicon glyphicon-hand-right"> {{amovie.Title}} </span>
               </a>
             </div> 
           </li>
         </ul> 
       </div>
 
-        <div class="col-md-7 float=right">
-          <div ng-show="searchInput">
-            <div><p>You searched for: <em>"{{searchInput}}"</em></p></div>
-            <div><p>You are looking at: "<strong><u>{{movieTitle}}</u></strong>"</p></div>
-          </div>
-          <p>The Plot: {{moviePlot}}</p>
-          <div ng-hide="imageHide">
-            <img ng-src="{{moviePoster}}">
-          </div>
-        </div> 
+      <div class="col-md-7 float=right">
+        <div class="searchTitle">
+        <h2>Search Results</h2>
+        </div>
+        <div ng-show="searchInput">
+          <div><p>You searched for: <em>"{{searchInput}}"</em></p></div>
+          <div><p>You are looking at: "<strong><u>{{movieTitle}}</u></strong>"</p></div>
+        </div>
+        <div ng-hide="plotHide">
+          <p class="plotTitle">The Plot: <p class="plotContent">{{moviePlot}}</p></p>
+        </div>
+        <div class="posterImage"ng-hide="imageHide">
+          <img ng-src="{{moviePoster}}">
+        </div>
+      </div> 
 
 
       </div>
