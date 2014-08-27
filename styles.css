@@ -29,8 +29,7 @@ ul {
   /*text-align: center;*/
 }
 
-.searchResults.overlay{
-  float: right;
+.movie-list.overlay {
   border-radius: 30px;
 
   -webkit-transition: background-color 2s ease;
@@ -44,4 +43,55 @@ ul {
   -ms-transition: color 0.75s ease;
   -o-transition: color 0.75s ease;
   transition: color 0.75s ease;
+}
+
+.searchResults.overlay {
+  float: right;
+  border-radius: 30px;
+
+  -webkit-transition: background-color 2s ease;
+  -moz-transition: background-color 2s ease;
+  -ms-transition: background-color 2s ease;
+  -o-transition: background-color 2s ease;
+  transition: background-color 2s ease;
+}
+
+.searchTitle {
+  -webkit-transition: color 0.75s ease;
+  -moz-transition: color 0.75s ease;
+  -ms-transition: color 0.75s ease;
+  -o-transition: color 0.75s ease;
+  transition: color 0.75s ease;
+}
+
+.searchedFor {
+  -webkit-transition: color 1.50s ease;
+  -moz-transition: color 1.50s ease;
+  -ms-transition: color 1.50s ease;
+  -o-transition: color 1.50s ease;
+  transition: color 1.50s ease;
+}
+
+.lookingAt {
+  -webkit-transition: color 2.0s ease;
+  -moz-transition: color 2.0s ease;
+  -ms-transition: color 2.0s ease;
+  -o-transition: color 2.0s ease;
+  transition: color 2.0s ease;
+}
+
+.plotTitle {
+  -webkit-transition: color 3.00s ease;
+  -moz-transition: color 3.00s ease;
+  -ms-transition: color 3.00s ease;
+  -o-transition: color 3.00s ease;
+  transition: color 3.00s ease;
+}
+
+.plotContent {
+  -webkit-transition: color 3.75s ease;
+  -moz-transition: color 3.75s ease;
+  -ms-transition: color 3.75s ease;
+  -o-transition: color 3.75s ease;
+  transition: color 3.75s ease;
 }
