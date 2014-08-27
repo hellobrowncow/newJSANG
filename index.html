@@ -21,12 +21,14 @@
           </div>
           <form class="search-form" data-ng-submit="search(searchInput)">
             <input type = "input" name="search-field" class="search-field" data-ng-model="searchInput">
-            <input type="submit" data-ng-submit="searchInput" value="Search the OMDb ! !">
+            <input type="submit" data-ng-submit="searchInput" value="Search">
           </form>
-          <input type = "checkbox" name="imagebox" ng-model="imageHide">
-          <label for="imagebox">Hide Image?</label>
-          <input type = "checkbox" name="plotbox" ng-model="plotHide">
-          <label for="imagebox">Hide Plot?</label>
+          <div class="checkboxes">
+            <input type = "checkbox" name="plotbox" ng-model="plotHide">
+            <label for="imagebox">Hide Plot?</label>
+            <input type = "checkbox" name="imagebox" ng-model="imageHide">
+            <label for="imagebox">Hide Poster?</label>
+          </div>
           <div class="movie-list overlay">
             <ul class="movie-list" id="search-drop-down">
               <li class="movie-in-list" data-ng-repeat="amovie in movieList">
