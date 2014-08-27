@@ -8,8 +8,11 @@ ul {
   list-style: none;
 }
 
-.searchResult {
-  float: right;
+.overlay:hover {
+  background-color: hsla(0,0%,0%,0.2);
+  border-radius: 30px;
+  color: white;
+  font-size: 100%;
 }
 
 .plotTitle {
@@ -19,4 +22,8 @@ ul {
 
 .posterImage {
   /*text-align: center;*/
+}
+
+.searchResult {
+  float: right;
 }
