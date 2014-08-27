@@ -25,7 +25,8 @@ ul {
   font-style: italic;
 }
 
-.posterImage {
+.posterImage img {
+  border-radius: 20px;
   /*text-align: center;*/
 }
 
