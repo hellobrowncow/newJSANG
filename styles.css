@@ -4,6 +4,10 @@ body {
   background:url("images/film-2048x1536.jpg");
 }
 
+ul {
+  list-style: none;
+}
+
 .searchResult {
   float: right;
 }
