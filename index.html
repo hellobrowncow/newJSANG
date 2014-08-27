@@ -27,15 +27,17 @@
           <label for="imagebox">Hide Image?</label>
           <input type = "checkbox" name="plotbox" ng-model="plotHide">
           <label for="imagebox">Hide Plot?</label>
-          <ul class="movie-list overlay" id="search-drop-down">
-            <li class="movie-in-list" data-ng-repeat="amovie in movieList">
-              <div>
-                <a href="" data-ng-click="showDetails(amovie)">  <!-- simulates hyperlink -->
-                  <span class="glyphicon glyphicon-hand-right"> {{amovie.Title}} </span>
-                </a>
-              </div> 
-            </li>
-          </ul> 
+          <div class="movie-list overlay">
+            <ul class="movie-list" id="search-drop-down">
+              <li class="movie-in-list" data-ng-repeat="amovie in movieList">
+                <div>
+                  <a href="" data-ng-click="showDetails(amovie)">  <!-- simulates hyperlink -->
+                    <span class="glyphicon glyphicon-hand-right"> {{amovie.Title}} </span>
+                  </a>
+                </div> 
+              </li>
+            </ul> 
+          </div>
         </div>
 
         <div class="searchResults overlay col-md-7">
@@ -52,7 +54,7 @@
             </div>
           </div>
           <div class="posterImage"ng-hide="imageHide">
-            <img ng-src="{{moviePoster}}">
+            <p><img ng-src="{{moviePoster}}"></p>
           </div>
         </div> 
 

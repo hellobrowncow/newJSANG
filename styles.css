@@ -30,20 +30,29 @@ ul {
   /*text-align: center;*/
 }
 
-.movie-list.overlay {
+.movie-list {
+  /*border-width: 50px;*/
   border-radius: 30px;
+  margin: 30px;
 
   -webkit-transition: background-color 2s ease;
   -moz-transition: background-color 2s ease;
   -ms-transition: background-color 2s ease;
   -o-transition: background-color 2s ease;
   transition: background-color 2s ease;
+}
 
-  -webkit-transition: color 0.75s ease;
-  -moz-transition: color 0.75s ease;
-  -ms-transition: color 0.75s ease;
-  -o-transition: color 0.75s ease;
-  transition: color 0.75s ease;
+.glyphicon-hand-right {
+  text-indent: -40px;
+}
+
+.glyphicon-hand-right:hover {
+  font-weight: bold;
+ -webkit-transition: color 1s ease;
+ -moz-transition: color 1s ease;
+ -ms-transition: color 1s ease;
+ -o-transition: color 1s ease;
+ transition: color 1s ease; 
 }
 
 .searchResults.overlay {
