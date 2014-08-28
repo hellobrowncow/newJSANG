@@ -2,6 +2,8 @@
 
 body {
   background:url("images/film-2048x1536.jpg");
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
 }
 
 body a:link {
@@ -22,6 +24,7 @@ ul {
 }
 
 .btn.btn-primary {
+  margin-bottom: 5px; 
   padding-top: 3px;
   font-size: 15px;
   width: 100px;
