@@ -19,10 +19,6 @@ body a:hover {
   font-weight: bold;
 }
 
-ul {
-  list-style: none;
-}
-
 .btn.btn-primary {
   margin-bottom: 5px; 
   padding-top: 3px;
@@ -60,6 +56,10 @@ ul {
 
 .movie-list.overlay:hover {
 background-color: hsla(0,0%,0%,0.1);
+}
+
+.movie-list.overlay ul:hover {
+  list-style: none;
 }
 
 .overlay a:hover {
