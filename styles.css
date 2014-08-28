@@ -15,6 +15,10 @@ ul {
   font-size: 100%;
 }
 
+.movie-list.overlay:hover {
+background-color: hsla(0,0%,0%,0.1);
+}
+
 .overlay a:hover {
   color: white;
   font-size: 100%;
@@ -34,8 +38,8 @@ ul {
   text-align: center;  
 }
 
-.movie-list {
-  /*border-width: 50px;*/
+.movie-list.overlay {
+  min-height: 150px;
   border-radius: 30px;
   margin: 15px;
 
