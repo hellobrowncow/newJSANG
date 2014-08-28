@@ -9,14 +9,30 @@ ul {
 }
 
 .btn.btn-primary {
+  padding-top: 3px;
+  font-size: 15px;
   width: 100px;
   height: 28px;
-  padding-top: 3px;
+
+  -webkit-transition: all 1.3s ease;
+  -moz-transition: all 1.3s ease;
+  -ms-transition: all 1.3s ease;
+  -o-transition: all 1.3s ease;
+  transition: all 1.3s ease;
 }
 
 .btn.btn-primary:hover {
   background-color: #5bc0de;
   border-color: #5bc0de;
+  font-size: 18px;
+  width: 120px;
+  height: 32px;
+
+  -webkit-transition: all 1.3s ease;
+  -moz-transition: all 1.3s ease;
+  -ms-transition: all 1.3s ease;
+  -o-transition: all 1.3s ease;
+  transition: all 1.3s ease;
 }
 
 .overlay:hover {
