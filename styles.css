@@ -8,6 +8,17 @@ ul {
   list-style: none;
 }
 
+.btn.btn-primary {
+  width: 100px;
+  height: 28px;
+  padding-top: 3px;
+}
+
+.btn.btn-primary:hover {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
 .overlay:hover {
   background-color: hsla(0,0%,0%,0.2);
   border-radius: 30px;
