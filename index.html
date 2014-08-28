@@ -29,7 +29,7 @@
             <input type = "checkbox" name="imagebox" ng-model="imageHide">
             <label for="imagebox">Hide Poster?</label>
           </div>
-          <div class="movie-list overlay">
+          <div class="movie-list overlay" ng-show="searchInput">
             <ul class="movie-list" id="search-drop-down">
               <li class="movie-in-list" data-ng-repeat="amovie in movieList">
                 <div>

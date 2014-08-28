@@ -4,6 +4,19 @@ body {
   background:url("images/film-2048x1536.jpg");
 }
 
+body a:link {
+  color:#00B5FC;
+}
+
+body a:visited {
+  color:#00A2FC;
+}
+
+body a:hover {
+  color:white;
+  font-weight: bold;
+}
+
 ul {
   list-style: none;
 }
